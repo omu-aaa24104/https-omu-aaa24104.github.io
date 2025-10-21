@@ -1,17 +1,76 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お薦めの旅行先紹介</title>
+    <meta charset="UTF-8">
+    <title>Webシステム構築基礎 第2回課題 - 旅行先</title>
+    <style>
+        body {
+            font-family: "Meiryo", sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+        header {
+            background-color: #2196f3;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        img {
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        form {
+            background-color: #ffffff;
+            border: 2px solid #2196f3;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 15px 30px;
+            text-align: left;
+            margin-bottom: 30px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+        form h2 {
+            text-align: center;
+            color: #2196f3;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            margin-left: 10px;
+        }
+        output {
+            font-size: 1.1em;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Webシステム構築基礎 第2回課題</h1>
-    <p>弓場大輝(AAA24104)</p>
-  </header>
+    <header>
+        <h1>Webシステム構築基礎 第2回課題</h1>
+        <p>山田太郎（AAA12345）</p>
+    </header>
 
-  <main>
+    <!-- BMI指標計算フォーム -->
+    <section>
+        <h2>BMI指標計算</h2>
+        <form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
+            <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
+            <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
+            <p><label>BMI：<output name="bmi"></output></label></p>
+        </form>
+    </section>
     <h2>私のお薦めの旅行先：滋賀</h2>
 
     <!-- ✅ 著作権フリー画像（Pixabay） -->
