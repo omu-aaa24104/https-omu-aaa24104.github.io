@@ -6,12 +6,10 @@
     <style>
         body {
             font-family: "Meiryo", sans-serif;
-            /* 中央揃えから左揃えに変更 */
             text-align: left;
             background-color: #f9f9f9;
             margin: 20px;
         }
-        /* 以下のスタイルは削除された要素のものですが、#clock のために残します */
         header {
             background-color: #4caf50;
             color: white;
@@ -30,22 +28,23 @@
         }
         a {
             color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
         }
         a:hover {
-            text-decoration: underline;
+            text-decoration: none;
+        }
+        .float-image {
+            float: right;
+            width: 250px;
+            margin-left: 20px;
         }
     </style>
 
     <script>
         function updateClock() {
             var now = new Date();
-
             var year = now.getFullYear();
-            var month = now.getMonth() + 1; // getMonth() は0から始まるため+1
+            var month = now.getMonth() + 1;
             var day = now.getDate();
-            
             var hours = now.getHours();
             var minutes = now.getMinutes();
             var seconds = now.getSeconds();
@@ -56,80 +55,53 @@
             if (minutes < 10) minutes = '0' + minutes;
             if (seconds < 10) seconds = '0' + seconds;
 
-            /* timeString を YYYY/MM/DD HH:MM:SS 形式に変更 */
             var timeString = year + '/' + month + '/' + day + ' ' + hours + ':' + minutes + ':' + seconds;
             document.getElementById('clock').innerHTML = timeString;
         }
-
         setInterval(updateClock, 1000);
         window.onload = updateClock;
     </script>
 </head>
 <body>
-        <h1>🌐 Phase 0-1: HTML基礎確認</h1>
-    
-    <p>弓場大輝 (AAA24104)</p>
-
-    <h2>現在時刻</h2>
-    <div id="clock"></div>
-    
+    <h1>🌐 Phase 0-1: HTML基礎確認</h1>
+    <p>弓場大輝 (AAA24104)</p>
+    <h2>現在時刻</h2>
+    <div id="clock"></div>
     <div>
         <h2>📝 課題1: 自己紹介セクション作成</h2>
         <p><strong>指示:</strong> 下記のHTMLコメント部分に、あなたの自己紹介を書いてください。</p>
-        
         <h3>自己紹介</h3>
         <p>名前: 弓場大輝</p>
         <p>職業: 学生</p>
         <p>趣味: 読書、ゲーム</p>
-        
         <p>✅ 完了したら、この課題は終了です</p>
     </div>
-    
+    
     <div>
-       <h2>📋 課題2: リスト作成</h2>
+        <h2>📋 課題2: リスト作成</h2>
+        <p><strong>指示:</strong> 好きな食べ物を5つ、番号付きリスト（ol）で作成してください。</p>
 
-        <p><strong>指示:</strong> 好きな食べ物を5つ、番号付きリスト（ol）で作成してください。</p>
+                <img src="https://publicdomainq.net/images/201710/26s/publicdomainq-0014800xsw.jpg" alt="ラーメンの写真" class="float-image">
 
-        <!-- ここに好きな食べ物のリストを作成してください -->
+        <ol>
+            <li>ラーメン</li>
+            <li>お寿司</li>
+            <li>ハンバーグ</li>
+            <li>タピオカ</li>
+            <li>カレーライス</li>
+        </ol>
+    </div>
+    
+    <div>
+        <h2>🔗 課題3: リンク作成</h2>
+        <p><strong>指示:</strong> 以下のリンクを作成してください：</p>
+        <ul>
+            <li><a href="https://www.google.com/" target="_blank">Google（新しいタブで開く）</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub（新しいタブで開く）</a></li>
+        </ul>
+    </div>
 
-        <h3>好きな食べ物</h3>
-
-        <ol>
-
-            <li>ラーメン</li>
-
-            <li>寿司</li>
-
-            <li>ハンバーグ</li>
-
-            <li>たこ焼き</li>
-
-            <li>カレーライス</li>
-
-        </ol>
-
-    </div>
-
-    
-
-    <div>
-
-        <h2>🔗 課題3: リンク作成</h2>
-
-        <p><strong>指示:</strong> 以下のリンクを作成してください：</p>
-
-        <!-- ここにリンクを作成してください -->
-
-      <p>
-
-            <a href="https://www.google.com/" target="_blank">Google</a><br>
-
-            <a href="https://github.com/" target="_blank">GitHub</a>
-
-        </p>
-
-    </div>
+    <p><a href="second.html">おすすめの旅行先</a></p>
 
 </body>
-
 </html>
