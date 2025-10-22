@@ -2,67 +2,43 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Webシステム構築基礎 第2回課題 - 旅行先</title>
+    <title>BMI計算とおすすめの旅行先</title>
     <style>
         body {
-            font-family: "Meiryo", sans-serif;
-            text-align: left;
-            background-color: #f9f9f9;
-            margin: 20px;
+            font-family: sans-serif;
+            line-height: 1.2;
+        }
+        form p {
+            margin: 4px 0;
         }
         img {
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        form {
-            background-color: #ffffff;
-            border: 2px solid #2196f3;
-            border-radius: 10px;
-            padding: 15px 30px;
-            text-align: left;
-            margin-bottom: 30px;
-            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-        }
-        form h2 {
-            text-align: center;
-            color: #2196f3;
-        }
-        label {
-            font-weight: bold;
-        }
-        input {
-            margin-left: 10px;
-        }
-        output {
-            font-size: 1.1em;
-            color: #d32f2f;
-            font-weight: bold;
+            width: 400px;
+            height: auto;
+            border-radius: 6px;
         }
     </style>
 </head>
-<body    <h2>BMI指標計算</h2>
-    <form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
-        <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
-        <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
-        <p><label>BMI：<output name="bmi"></output></label></p>
-    </form>
+<body>
+    <main>
+        <h2>BMI指標計算</h2>
+        <form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
+            <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
+            <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
+            <p><label>BMI：<output name="bmi"></output></label></p>
+        </form>
 
-    <h1>おすすめの旅行先</h1>
+        <hr>
 
-    <ol>
-      <li>琵琶湖</li>
-    </ol>
-    
-    <img src="https://github.com/omu-aaa24104/https-omu-aaa24104.github.io/blob/main/istockphoto-666107872-612x612.jpg"
-         alt="琵琶湖の風景" width="300">
+        <h2>おすすめの旅行先：琵琶湖</h2>
+        <p>滋賀県にある日本最大の湖で、美しい自然と歴史を感じられるスポットです。湖畔ではサイクリングやクルージングなどが楽しめます。</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Lake_Biwa.jpg" alt="琵琶湖の写真">
 
+        <!-- ✅ index.html へのリンク -->
+        <p><a href="index.html">おすすめの食べ物に戻る</a></p>
+    </main>
+
+    <footer>
+        <p>© 2025 Web System Basics</p>
+    </footer>
 </body>
 </html>
